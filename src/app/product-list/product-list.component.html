@@ -1,28 +1,17 @@
 
 <h1>Items </h1>
 
-<div *ngFor='let product of products'>
-    <a [title]="product.name + ' details'"><h2>{{product.name}}</h2></a>
-    <h3>{{product.price | currency}}</h3>
-    <p *ngIf='product.description'>
-        {{product.description}}
-    </p>
-    <button class="btn btn-primary" (click)=share()>Share</button>
-    <br>
-    <app-product-alert [product]='product' (notify)="onNotify()"></app-product-alert>
-</div>
+
 
 <br>
 <div class="ngclass">
-    <button [style.font-weight]='isBold? "bold": "normal"'>My button1</button>
-    <!-- Below notation for font-weight also works fine -->
-    <!-- <button [style.fontWeight]='isBold? "bold": "normal"'>My button1</button> -->
+    <button (click)='onClick()'>My button1</button>
     <br>
     <br>
-    <button [style.fontSize.px]='fontSize'>My button2</button>
+    <button >My button2</button>
     <br>
     <br>
-    <button [ngStyle]='addStyle()'>My button3</button>
+    
     
     <!-- <button [ngClass]='red'>My button</button> -->
 
