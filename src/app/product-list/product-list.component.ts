@@ -8,9 +8,14 @@ import { products } from '../products';
 })
 export class ProductListComponent{
 
+  show: boolean = false;
 
-  onClick: void()=>{
+  onClick(){
     console.log("button clicked");
+  }
+
+  showDetails(event){
+    this.show = !this.show;
   }
 
 

@@ -8,7 +8,29 @@
     <button (click)='onClick()'>My button1</button>
     <br>
     <br>
-    <button >My button2</button>
+    <table>
+        <th colspan="2">Employee Details </th>
+        <tr>
+            <td>First Name</td>
+            <td>Tom</td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>Hopkins</td>
+        </tr>
+  
+        <tr *ngIf='show'>
+            <td>Gender</td>
+            <td>Male</td>
+        </tr>
+        <tr *ngIf='show'>
+            <td>Age</td>
+            <td>32</td>
+        </tr>
+
+    </table>
+    <br>
+    <button (click)='showDetails($event)'>{{show?"Hide": "Show"}} Details</button>
     <br>
     <br>
     

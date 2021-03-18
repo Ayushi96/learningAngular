@@ -12,3 +12,14 @@
 .ngclass{
     margin-left: 10px;
 }
+
+table{
+    border: black solid 2px;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
