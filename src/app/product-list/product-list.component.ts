@@ -7,19 +7,17 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  products = products;
-  classesApplied: string = 'italics bold';
-  boldClass: boolean = true;
-  redClass: boolean = false;
-  italicsClass: boolean = true;
+  isBold: boolean = true;
+  fontSize: number = 30;
+  isItalic: boolean = true;
 
-  applyClass(){
-    let classes = {
-      red: this.redClass,
-      italics: this.italicsClass, 
-      bold: this.boldClass
-    };
-    return classes;
+  setStyle(){
+    let style = {
+      'font-size.px' : this.fontSize,
+      'font-weight' : this.isBold? 'bold': 'normal', 
+      'font-style' : this.isItalic? 'italic': 'normal'
+    }
+    return style;
   }
   constructor() { }
 
