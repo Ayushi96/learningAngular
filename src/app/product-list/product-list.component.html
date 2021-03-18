@@ -5,17 +5,10 @@
 
 <br>
 <div class="ngclass">
-    <button [style.font-weight]='isBold? "bold": "normal"'>My button1</button>
-    <!-- Below notation for font-weight also works fine -->
-    <!-- <button [style.fontWeight]='isBold? "bold": "normal"'>My button1</button> -->
+
+    <input type="text" name="name" id="name" [(ngModel)]='firstName'>
     <br>
-    <br>
-    <button [style.fontSize.px]='fontSize'>My button2</button>
-    <br>
-    <br>
-    <button [ngStyle]='setStyle()'>My button3</button>
-    
-    <!-- <button [ngClass]='red'>My button</button> -->
+    Text entered is {{firstName}}
 
 </div>
 <br>
