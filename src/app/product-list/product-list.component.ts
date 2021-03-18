@@ -10,6 +10,17 @@ export class ProductListComponent implements OnInit {
   products = products;
   classesApplied: string = 'italics bold';
   boldClass: boolean = true;
+  redClass: boolean = false;
+  italicsClass: boolean = true;
+
+  applyClass(){
+    let classes = {
+      red: this.redClass,
+      italics: this.italicsClass, 
+      bold: this.boldClass
+    };
+    return classes;
+  }
   constructor() { }
 
   ngOnInit(): void {
